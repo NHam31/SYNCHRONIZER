@@ -131,7 +131,7 @@ résulat:
 résulat:
 **Image ségmentée**
 
-.. figure:: _static/images/download.jpg
+.. figure:: _static/images/output_result.jpg
    :width: 500px
    :align: center
    :alt: image résultante de grounding dino 
@@ -145,10 +145,19 @@ résulat:
 résulat:
 fichier JSON 
 
+   * Generation des descriptions textuelles
+   * Generation des descriptions semantique utilisant BLIP
+**Image avec HLBB**
+
+.. figure:: _static/images/download.jpg
+   :width: 500px
+   :align: center
+   :alt: image finale
+
 Output Final
 ~~~~~~~~~~~~
 
-* Image segmentée avec bounding boxes précises
+* Image segmentée avec bounding boxes enrichies
 * Descriptions sémantiques détaillées (BLIP)
 * Classes structurées (Mistral)
 * Fichier JSON avec 61 caractéristiques par objet (HLBB)
