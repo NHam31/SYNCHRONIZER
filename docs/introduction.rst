@@ -1,5 +1,5 @@
-Segma Vision Pro HLBB 
-=====================
+Segma Vision Pro SYNCHRONIZER 
+=============================
 
 **introduction à Segmentation Multi-Modal Intelligent**
 
@@ -20,6 +20,10 @@ Démonstration
      - .. figure:: _static/images/output_result.jpg
           :width: 100%
           :alt: Résultat final
+
+descption par BLIP :
+a bedroom with a bed and a lamp on the wall, a wooden cabinet with doors, a white wall with some plants, a brown blanket on the bed, wooden floors, a white light hanging from ceiling, some artwork on wall,
+
 
 Objectif du Projet
 -------------------
@@ -58,6 +62,14 @@ Le pipeline intègre quatre composants principaux dans un workflow séquentiel :
 
 Workflow du Pipeline
 --------------------
+**pipeline**
+
+.. figure:: _static/images/pipeline.jpg
+   :width: 500px
+   :align: center
+   :alt: workflow  
+   
+   le pipeline qu'on a suivi 
 
 Pipeline en 5 étapes
 ~~~~~~~~~~~~~~~~~~~~~
@@ -70,24 +82,68 @@ Input
    * SAM génère automatiquement plusieurs masques de segmentation
    * Découverte de tous les objets et régions potentielles
 
+    résulat:
+**exemple de segmentation par SAM **
+
+.. figure:: _static/images/mask.jpg
+   :width: 500px
+   :align: center
+   :alt: résultat de SAM   
+   
+   résultat de SAM  
+
 **2. Analyse Sémantique (BLIP)**
    * Chaque masque est analysé individuellement par BLIP
    * Génération de descriptions détaillées pour chaque région
    * Annotation automatique du contenu visuel
+
+   résulat:
+   
+**exemple de masques annotés**
+
+. list-table::
+   :widths: 50 50
+   :header-rows: 1
+
+   * - Image 1
+     - imaeg 2
+   * - .. figure:: _static/images/bed.jpg
+          :width: 100%
+          :alt: Image 1
+     - .. figure:: _static/images/image.jpg
+          :width: 100%
+          :alt: Image 2
+
 
 **3. Extraction de Classes (Mistral LLM)**
    * Traitement des descriptions BLIP par le LLM Mistral
    * Extraction et structuration des mots-clés importants
    * Conversion en classes/prompts textuels utilisables
 
+résulat: 
+['chairs', 'wall mounted light', 'lamps', 'shelf', 'brown leather', 'bed', 'light switch plate', 'white circle', 'thermore', 'black and white floor lamp', 'door', 'small wooden object', 'flower', 'table', 'cabinet', 'white plastic plate', 'black and white photo', 'gold plate', 'wooden box', 'wall light', 'vase']
+
 **4. Détection Ciblée (Grounding DINO)**
    * Utilisation des classes extraites comme prompts
    * Segmentation précise selon les objets détectés
    * Génération de bounding boxes optimisées
 
+résulat:
+**Image ségmentée**
+
+.. figure:: _static/images/download.jpg
+   :width: 500px
+   :align: center
+   :alt: image résultante de grounding dino 
+   
+   image résultante de grounding dino 
+
 **5. Enrichissement HLBB**
    * Extraction de 61 caractéristiques quantitatives par objet
    * Analyse approfondie de couleur, texture et géométrie
+
+résulat:
+fichier JSON 
 
 Output Final
 ~~~~~~~~~~~~
