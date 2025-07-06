@@ -1,5 +1,4 @@
 
-
 Cette section présente les stratégies de fine-tuning et d'optimisation pour adapter le pipeline Segma Vision Pro HLBB à des domaines spécifiques et améliorer ses performances.
 
 Vue d'ensemble du Fine-tuning
@@ -63,10 +62,10 @@ Adaptation de Domaine
 **Fine-tuning SAM avec LoRA**
 
 Au lieu de modifier tous les poids, LoRA ajoute de petites matrices qui apprennent les adaptations.
+
 .. code-block:: python
 
    from peft import LoraConfig, get_peft_model
-   
    # Configuration LoRA pour fine-tuning efficace
    lora_config = LoraConfig(
        r=16,                    # Rang de décomposition
@@ -499,7 +498,7 @@ Sélection et Engineering de Features
 Pipeline End-to-End Fine-tuning
 ===============================
 
-End-to-End Fine-tuning : Entraînement simultané de tous les composants du pipeline (SAM, BLIP, Mistral, Grounding DINO) pour optimiser le résultat final plutôt que chaque composant individuellement. Permet une cohérence globale et de meilleur
+End-to-End Fine-tuning : Entraînement simultané de tous les composants du pipeline (SAM, BLIP, Mistral, Grounding DINO) pour optimiser le résultat final plutôt que chaque composant individuellement. Permet une cohérence globale et de meilleurs résultats.
 
 Entraînement Joint
 ------------------
