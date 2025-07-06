@@ -2,7 +2,10 @@
 Segma Vision Pro HLBB
 =====================
 
-Bienvenue dans la documentation de Segma Vision Pro HLBB.
+Segma Vision Pro Synchronizer
+=============================
+
+Bienvenue dans la documentation de Segma Vision Pro Synchronizer.
 
 .. toctree::
    :maxdepth: 2
@@ -22,6 +25,13 @@ Bienvenue dans la documentation de Segma Vision Pro HLBB.
    :caption: Fine-tuning et Optimisation:
 
    finetuning
+
+
+.. toctree::
+   :maxdepth: 2
+   :caption: benchmarking :
+
+   benchmarking
 
 Indices and tables
 ==================
