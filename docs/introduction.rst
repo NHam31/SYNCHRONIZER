@@ -101,18 +101,28 @@ Input
    
 **exemple de masques annotés**
 
-. list-table::
-   :widths: 50 50
-   :header-rows: 1
 
-   * - Image 1
-     - imaeg 2
-   * - .. figure:: _static/images/bed.jpg
-          :width: 100%
-          :alt: Image 1
-     - .. figure:: _static/images/image.jpg
-          :width: 100%
-          :alt: Image 2
+.. container:: twocol
+
+   .. container:: leftside
+
+      **Image 1**
+      
+      .. figure:: _static/images/bed.jpg
+         :width: 100%
+         :alt: Masques sur lit
+         
+         Segmentation automatique d'un lit
+
+   .. container:: rightside
+
+      **Image 2**
+      
+      .. figure:: _static/images/image.jpg
+         :width: 100%
+         :alt: Masques sur image
+         
+         Segmentation d'objets multiples
 
 
 **3. Extraction de Classes (Mistral LLM)**
@@ -131,7 +141,7 @@ résulat:
 résulat:
 **Image ségmentée**
 
-.. figure:: _static/images/output_result.jpg
+.. figure:: _static/images/download.jpg
    :width: 500px
    :align: center
    :alt: image résultante de grounding dino 
@@ -145,19 +155,10 @@ résulat:
 résulat:
 fichier JSON 
 
-   * Generation des descriptions textuelles
-   * Generation des descriptions semantique utilisant BLIP
-**Image avec HLBB**
-
-.. figure:: _static/images/download.jpg
-   :width: 500px
-   :align: center
-   :alt: image finale
-
 Output Final
 ~~~~~~~~~~~~
 
-* Image segmentée avec bounding boxes enrichies
+* Image segmentée avec bounding boxes précises
 * Descriptions sémantiques détaillées (BLIP)
 * Classes structurées (Mistral)
 * Fichier JSON avec 61 caractéristiques par objet (HLBB)
@@ -183,4 +184,6 @@ Applications
 * Recherche par contenu visuel avancée
 * Analyse d'images médicales ou satellitaires
 * Système de description automatique d'images
+
+
 
