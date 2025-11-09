@@ -67,4 +67,51 @@ You’ll also need:
 - A GPU (recommended)
 - Access to Hugging Face models: ```bash facebook/sam```, ```bash Salesforce/blip```, ```bash mistralai/Mistral-7B-Instruct-v0.3 ```, ```bash IDEA-Research/grounding-dino-tiny```
 
+## 🚀 Deployment
+
+This project ships with a ready-to-run **Streamlit** app (English UI).
+
+### Local (recommended)
+```bash
+# 1) create & activate a virtual env (optional)
+python -m venv .venv
+source .venv/bin/activate     # Windows PowerShell: .venv\Scripts\Activate.ps1
+
+# 2) install dependencies
+pip install -r requirements.txt
+
+# 3) (optional) download model weights
+bash scripts/download_weights.sh
+
+# 4) run the app
+# If the app lives at repo root:
+streamlit run app.py
+# If the app is under ./app:
+# cd app && streamlit run app.py
+```
+### GPU on Windows (WSL2 + NVIDIA)
+
+-Ensure NVIDIA driver is installed on Windows and nvidia-smi works.
+
+-In WSL2, verify CUDA is visible:
+
+```bash
+python -c "import torch; print(torch.cuda.is_available())"
+```
+expected output : TRUE
+### Streamlit Community Cloud
+
+1. Go to **https://share.streamlit.io** → **Deploy an app**.
+
+2. Select this repo and set:
+   - **Main file path**: `app.py` _(or `app/app.py` if your app is in a subfolder)_
+   - **(Optional) Secrets** → add your Hugging Face token if needed: `HUGGING_FACE_HUB_TOKEN`
+
+3. Click **Deploy**.
+
+> **Note:** Weights are **not** versioned. If your app needs local checkpoints, use:
+> - `scripts/download_weights.sh`, or
+> - load from Hugging Face at runtime.
+
+
 
