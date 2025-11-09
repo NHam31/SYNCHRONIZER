@@ -35,6 +35,13 @@ All outputs are stored in a JSON file (`hlbb_output.json`) for further use or in
 ---
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NHam31/SYNCHRONIZER/blob/main/notebooks/sam_Blip_HLBB_clean.ipynb)
+
+## 📚 Documentation
+
+[![Documentation Status](https://readthedocs.org/projects/synchronizer-sv/badge/?version=latest)](https://synchronizer-sv.readthedocs.io/en/latest/)
+
+Full docs are available on **Read the Docs**:  
+➡️ https://synchronizer-sv.readthedocs.io/en/latest/introduction.html#demonstration
 ##  Project Structure
 
 ```bash
@@ -112,6 +119,7 @@ expected output : TRUE
 > **Note:** Weights are **not** versioned. If your app needs local checkpoints, use:
 > - `scripts/download_weights.sh`, or
 > - load from Hugging Face at runtime.
+
 
 
 
