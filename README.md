@@ -34,8 +34,7 @@ All outputs are stored in a JSON file (`hlbb_output.json`) for further use or in
 
 ---
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NHam31/<SYNCHRONIZER/blob/main/notebooks/CLEANED_sam_Blip_HLBB.ipynb
-)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NHam31/SYNCHRONIZER/blob/main/notebooks/sam_Blip_HLBB_clean.ipynb)
 ##  Project Structure
 
 ```bash
@@ -67,4 +66,5 @@ You’ll also need:
 
 - A GPU (recommended)
 - Access to Hugging Face models: ```bash facebook/sam```, ```bash Salesforce/blip```, ```bash mistralai/Mistral-7B-Instruct-v0.3 ```, ```bash IDEA-Research/grounding-dino-tiny```
+
 
